@@ -39,8 +39,12 @@ source .devops/bin/activate
 ### Running `app.py`
 
 1. Standalone:  `python app.py`
-2. Run in Docker:  `./run_docker.sh`
-3. Run in Kubernetes:  `./run_kubernetes.sh`
+2. Export environment variables for shell scripts
+
+    `export DOCKER_ID=<enter_your_your_docker_hub_id>`
+
+3. Run in Docker:  `./run_docker.sh`
+4. Run in Kubernetes:  `./run_kubernetes.sh`
 
 ### Kubernetes Steps
 

@@ -1,0 +1,4 @@
+pod/udacitymlproject-app created
+NAME                   READY   STATUS              RESTARTS   AGE
+udacitymlproject-app   0/1     ContainerCreating   0          0s
+error: unable to forward port because pod is not running. Current status=Pending

@@ -1,18 +1,18 @@
 #!/usr/bin/env bash
 
-# This tags and uploads an image to Docker Hub
+# This runs docker hub image with kubernetes
 
-# Step 1:
-# This is your Docker ID/path
-# dockerpath=<>
+# Your Docker ID/path
+dockerpath="${DOCKER_ID:=<your_docker_hub_id>}/udacitymlproject"
+echo "Docker ID and Image: $dockerpath"
 
-# Step 2
 # Run the Docker Hub container with kubernetes
+kubectl run udacitymlproject-app\
+    --image=docker.io/$dockerpath:latest\
+    --port=80 --labels app=udacitymlproject-app
 
-
-# Step 3:
 # List kubernetes pods
+kubectl get pods
 
-# Step 4:
 # Forward the container port to a host
-
+kubectl port-forward udacitymlproject-app 8000:80
